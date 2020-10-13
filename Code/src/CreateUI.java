@@ -6,7 +6,7 @@ public class CreateUI extends JPanel{
      static JFrame frame = new JFrame("D&DMonsterMaker");
 
     public static void createWindow(){
-        
+
         int width = 1000;
         int height = 700;
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
