@@ -3,13 +3,17 @@ import javax.swing.*;
 
 
 
+
 public class CreateUI extends JPanel{
+    static JFrame frame = new JFrame("D&DMonsterMaker");
 
     public static void createWindow(){
-        JFrame frame = new JFrame("D&DMonsterMaker");
         frame.getContentPane().add(new CreateUI());
+        GroupLayout layout = new GroupLayout(frame);
         int width = 1000;
         int height = 700;
+        setTitle();
+        createButtons();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JFrame.setDefaultLookAndFeelDecorated(true);
         frame.pack();
@@ -21,10 +25,19 @@ public class CreateUI extends JPanel{
 
     public void paint(Graphics g){
 
+    }
 
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 32));
-        g.drawString("D&D Monster Maker",350,40);
-        
+    public static void setTitle(){
+        JLabel label = new JLabel();
+        label.setFont(new Font("TimesRoman", Font.PLAIN, 30));
+        label.setHorizontalAlignment(0);
+        label.setVerticalAlignment(1);
+        label.setText("D&D Monster Maker");
+        frame.add(label);
+    }
+
+    public static void createButtons(){
 
     }
+
 }
