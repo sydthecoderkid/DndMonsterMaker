@@ -6,7 +6,7 @@ public class CreateUI {
     private JPanel DndMonsterMaker;
     private JLabel DnDMonsterMaker;
     private JButton createNewMonsterButton;
-    private JButton loadMonsterButton;
+    private JButton loadMonstersButton;
 
     public void createWindow() {
         JFrame frame = new JFrame("DndMonsterMaker");
