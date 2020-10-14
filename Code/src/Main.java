@@ -1,7 +1,8 @@
 public class Main {
 
     public static void main(String[] args){
-        CreateUI.createWindow();
+        CreateUI creator = new CreateUI();
+        creator.createWindow();
 
 
     }
