@@ -6,9 +6,10 @@
       <xy x="20" y="20" width="604" height="400"/>
     </constraints>
     <properties>
-      <background color="-15777509"/>
+      <background color="-7041392"/>
+      <enabled value="false"/>
       <font name="Times New Roman" size="36" style="1"/>
-      <foreground color="-11682954"/>
+      <foreground color="-6514020"/>
     </properties>
     <border type="none"/>
     <children>
@@ -17,9 +18,9 @@
           <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-6931673"/>
+          <background color="-393221"/>
           <font name="Times New Roman" size="72" style="1"/>
-          <foreground color="-2621422"/>
+          <foreground color="-527108"/>
           <text value="DndMonsterMaker"/>
           <verticalTextPosition value="1"/>
         </properties>

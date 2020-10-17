@@ -1,14 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
-public class CreateUI {
+
+public class CreateUI{
 
     private JPanel DndMonsterMaker;
     private JLabel DnDMonsterMaker;
     private JButton createNewMonsterButton;
     private JButton loadMonstersButton;
 
+    LoadMonsters monsterLoader;
+
+    CreateMonsters monsterCreator;
+
+    public CreateUI(){
+        monsterLoader = new LoadMonsters();
+        monsterCreator = new CreateMonsters();
+        createNewMonsterButton.addActionListener(monsterCreator);
+        loadMonstersButton.addActionListener(monsterLoader);
+    }
+
     public void createWindow() {
+
         JFrame frame = new JFrame("DndMonsterMaker");
         frame.setContentPane(new CreateUI().DndMonsterMaker);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -18,6 +32,10 @@ public class CreateUI {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
     }
+
+
+
+
 
 
 
