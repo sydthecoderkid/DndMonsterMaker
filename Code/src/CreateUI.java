@@ -5,10 +5,12 @@ import java.awt.event.ActionEvent;
 
 public class CreateUI{
 
-    private JPanel DndMonsterMaker;
+    public JPanel DndMonsterMaker;
     private JLabel DnDMonsterMaker;
     private JButton createNewMonsterButton;
     private JButton loadMonstersButton;
+
+    public static JFrame frame;
 
     LoadMonsters monsterLoader;
 
@@ -23,7 +25,7 @@ public class CreateUI{
 
     public void createWindow() {
 
-        JFrame frame = new JFrame("DndMonsterMaker");
+        frame = new JFrame("DndMonsterMaker");
         frame.setContentPane(new CreateUI().DndMonsterMaker);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Dimension dimension = new Dimension(1000,700);

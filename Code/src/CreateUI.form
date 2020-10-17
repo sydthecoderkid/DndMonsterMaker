@@ -32,19 +32,19 @@
         <properties>
           <background color="-3158065"/>
           <borderPainted value="true"/>
-          <contentAreaFilled value="true"/>
+          <contentareaFilled value="true"/>
           <enabled value="true"/>
           <focusPainted value="true"/>
           <font name="Times New Roman" size="36" style="1"/>
           <foreground color="-16498432"/>
-          <hideActionText value="false"/>
+          <hideactionText value="false"/>
           <opaque value="true"/>
           <selected value="false"/>
           <text value="Create new Monster"/>
           <visible value="true"/>
         </properties>
         <clientProperties>
-          <hideActionText class="java.lang.Boolean" value="false"/>
+          <hideactionText class="java.lang.Boolean" value="false"/>
         </clientProperties>
       </component>
       <component id="31832" class="javax.swing.JButton" binding="loadMonstersButton" default-binding="true">
