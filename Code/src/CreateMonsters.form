@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="CreateMonsters">
-  <grid id="27dc6" binding="MonsterPanel" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="MonsterPanel" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="500" height="565"/>
     </constraints>
     <properties>
       <background color="-1510151"/>
@@ -22,7 +22,7 @@
       </component>
       <component id="70fed" class="javax.swing.JTextField" binding="monsterNameTextField">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="1" column="0" row-span="4" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="310" height="120"/>
           </grid>
         </constraints>
@@ -30,35 +30,57 @@
           <background color="-3484973"/>
           <font name="Courier New" size="36" style="1"/>
           <foreground color="-15132391"/>
+          <horizontalAlignment value="0"/>
           <text value="Monster Name"/>
         </properties>
       </component>
       <component id="dd1b3" class="javax.swing.JTextField" binding="AC">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="4" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+          <grid row="5" column="1" row-span="2" col-span="1" vsize-policy="4" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="100" height="100"/>
           </grid>
         </constraints>
         <properties>
           <background color="-6445400"/>
-          <font name="Courier New" size="36" style="1"/>
+          <font name="Courier New" size="48" style="1"/>
           <foreground color="-1381654"/>
           <horizontalAlignment value="0"/>
           <text value="AC"/>
         </properties>
       </component>
+      <component id="4485d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="Courier New" size="28" style="1"/>
+          <foreground color="-11119018"/>
+          <text value="Hit Points"/>
+        </properties>
+      </component>
       <component id="7a831" class="javax.swing.JTextField" binding="HPTextField" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="100" height="100"/>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="2" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="100"/>
           </grid>
         </constraints>
         <properties>
           <background color="-6445400"/>
-          <font name="Courier New" size="36" style="1"/>
+          <font name="Courier New" size="72" style="1"/>
           <foreground color="-1381652"/>
           <horizontalAlignment value="0"/>
           <text value="HP"/>
+        </properties>
+      </component>
+      <component id="2d91d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="36" style="1"/>
+          <foreground color="-11119018"/>
+          <text value="Armor Class"/>
         </properties>
       </component>
     </children>
