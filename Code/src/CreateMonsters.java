@@ -11,11 +11,14 @@ public class CreateMonsters implements ActionListener {
     private JTextField AC;
     private JTextField monsterNameTextField;
     private JTextField HPTextField;
+    private JButton backButton;
+    private JButton statsButton;
 
     MonsterInfo monsterinfo;
 
     TextFieldActionListener textFieldListener;
-
+    BackToMainMenu backToMainMenu = new BackToMainMenu();
+    CreateStatsUI statsUI = new CreateStatsUI();
     public CreateMonsters(){
 
     AC = AssignListener(AC);
@@ -24,7 +27,8 @@ public class CreateMonsters implements ActionListener {
     setDefaultNames("AC", AC);
     setDefaultNames("Monster Name", monsterNameTextField);
     setDefaultNames("HPTextField", HPTextField);
-
+    backButton.addActionListener(backToMainMenu);
+    statsButton.addActionListener(statsUI);
 
 
     }
