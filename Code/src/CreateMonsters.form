@@ -48,7 +48,7 @@
           <text value="AC"/>
         </properties>
       </component>
-      <component id="4485d" class="javax.swing.JLabel">
+      <component id="4485d" class="javax.swing.JLabel" binding="HitPointsLabel">
         <constraints>
           <grid row="9" column="0" row-span="4" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -73,7 +73,7 @@
           <text value="HP"/>
         </properties>
       </component>
-      <component id="2d91d" class="javax.swing.JLabel">
+      <component id="2d91d" class="javax.swing.JLabel" binding="ArmorClassLabel">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

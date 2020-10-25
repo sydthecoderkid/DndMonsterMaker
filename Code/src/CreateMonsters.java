@@ -13,6 +13,8 @@ public class CreateMonsters implements ActionListener {
     private JTextField HPTextField;
     private JButton backButton;
     private JButton statsButton;
+    private JLabel ArmorClassLabel;
+    private JLabel HitPointsLabel;
 
     MonsterInfo monsterinfo;
 
@@ -20,13 +22,12 @@ public class CreateMonsters implements ActionListener {
     BackToMainMenu backToMainMenu = new BackToMainMenu();
     CreateStatsUI statsUI = new CreateStatsUI();
     public CreateMonsters(){
-
+        setDefaultNames("AC", AC);
+        setDefaultNames("Monster Name", monsterNameTextField);
+        setDefaultNames("HPTextField", HPTextField);
     AC = AssignListener(AC);
     monsterNameTextField = AssignListener(monsterNameTextField);
     HPTextField = AssignListener(HPTextField);
-    setDefaultNames("AC", AC);
-    setDefaultNames("Monster Name", monsterNameTextField);
-    setDefaultNames("HPTextField", HPTextField);
     backButton.addActionListener(backToMainMenu);
     statsButton.addActionListener(statsUI);
 
@@ -62,7 +63,7 @@ public class CreateMonsters implements ActionListener {
             }
 
             public void focusLost(FocusEvent e) {
-                // nothing
+                Totalinfo.setInfo(caller.getName(), caller.getText());
             }
         });
 
@@ -72,6 +73,8 @@ public class CreateMonsters implements ActionListener {
     public static void setDefaultNames(String name, JTextField textField){
         textField.setName(name); //Sets the desired text field's name to parameter
     }
+
+
 
 
 
