@@ -13,11 +13,11 @@ public class CreateStatsUI implements ActionListener {
     private JTextField conBonusTextField;
     private JTextField intBonusTextField;
     private JTextField charBonusTextField;
+    private JButton backButton;
     TextFieldActionListener textFieldListener = new TextFieldActionListener();
 
-
     public CreateStatsUI(){
-
+        BackToLastPane backToLastPane = new BackToLastPane();
         setDefaultNames("Str", strBonusTextField);
         setDefaultNames("Dex", dexBonusTextField);
         setDefaultNames("Wis", wisBonusTextField);
@@ -33,6 +33,7 @@ public class CreateStatsUI implements ActionListener {
         intBonusTextField = AssignListener(intBonusTextField);
         charBonusTextField = AssignListener(charBonusTextField);
 
+        backButton.addActionListener(backToLastPane);
 
 
 
@@ -44,6 +45,8 @@ public class CreateStatsUI implements ActionListener {
     }
 
     public void initializeThisPlane(){
+        BackToLastPane.lastPanel = (JPanel) CreateUI.frame.getContentPane();
+        CreateMonsters.holder.setVisible(false);
         CreateUI.frame.setContentPane(new CreateStatsUI().StatsPanel);
         CreateUI.frame.revalidate();
     }

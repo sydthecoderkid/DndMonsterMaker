@@ -1,8 +1,5 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
+import java.awt.event.*;
 
 public class CreateMonsters implements ActionListener {
 
@@ -15,21 +12,28 @@ public class CreateMonsters implements ActionListener {
     private JButton statsButton;
     private JLabel ArmorClassLabel;
     private JLabel HitPointsLabel;
-
+    public static JPanel thisLastPanel;
+    public static boolean lastPanelSet = false;
     MonsterInfo monsterinfo;
 
     TextFieldActionListener textFieldListener;
-    BackToMainMenu backToMainMenu = new BackToMainMenu();
+    BackToLastPane backToLastPane = new BackToLastPane();
     CreateStatsUI statsUI = new CreateStatsUI();
+    PanelChange panelChanger;
+    public static JLabel holder = new JLabel();
+
     public CreateMonsters(){
+        panelChanger = new PanelChange();
         setDefaultNames("AC", AC);
         setDefaultNames("Monster Name", monsterNameTextField);
         setDefaultNames("HPTextField", HPTextField);
     AC = AssignListener(AC);
     monsterNameTextField = AssignListener(monsterNameTextField);
     HPTextField = AssignListener(HPTextField);
-    backButton.addActionListener(backToMainMenu);
+    backButton.addActionListener(backToLastPane);
     statsButton.addActionListener(statsUI);
+    MonsterPanel.setName("Monster Panel");
+    holder.addComponentListener(panelChanger);
 
 
     }
@@ -37,14 +41,22 @@ public class CreateMonsters implements ActionListener {
     public void actionPerformed(ActionEvent e) { //Called when the button is pressed.
         setMonsterUI();
         monsterinfo = new MonsterInfo();
+
+
+
+
     }
 
 
 
 
     public void setMonsterUI() {
-
         //Initalizes the content pane.
+        if(!lastPanelSet){
+            setLastPanel();
+        }
+
+        BackToLastPane.lastPanel = thisLastPanel;
         CreateUI.frame.setContentPane(new CreateMonsters().MonsterPanel);
         CreateUI.frame.revalidate();
 
@@ -74,6 +86,10 @@ public class CreateMonsters implements ActionListener {
         textField.setName(name); //Sets the desired text field's name to parameter
     }
 
+    public static void setLastPanel(){
+        thisLastPanel =  (JPanel) CreateUI.frame.getContentPane();
+        lastPanelSet = true;
+    }
 
 
 
