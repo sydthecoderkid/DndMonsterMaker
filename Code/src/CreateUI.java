@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 
 public class CreateUI{
@@ -16,11 +18,18 @@ public class CreateUI{
 
     CreateMonsters monsterCreator;
 
+    public static JPanel panels[];
+
+
+    public static int currentpanel = 0;
+
     public CreateUI(){
+        panels = new JPanel[4];
         monsterLoader = new LoadMonsters();
         monsterCreator = new CreateMonsters();
         createNewMonsterButton.addActionListener(monsterCreator);
         loadMonstersButton.addActionListener(monsterLoader);
+        panels[0] = DndMonsterMaker;
     }
 
     public void createWindow() {
@@ -33,6 +42,7 @@ public class CreateUI{
         frame.pack();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
+
     }
 
 

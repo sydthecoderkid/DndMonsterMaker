@@ -17,6 +17,7 @@ public class CreateStatsUI implements ActionListener {
     TextFieldActionListener textFieldListener = new TextFieldActionListener();
 
     public CreateStatsUI(){
+       CreateUI.panels[2] = StatsPanel;
         BackToLastPane backToLastPane = new BackToLastPane();
         setDefaultNames("Str", strBonusTextField);
         setDefaultNames("Dex", dexBonusTextField);
@@ -41,12 +42,13 @@ public class CreateStatsUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         initializeThisPlane();
+        CreateUI.currentpanel += 1;
 
     }
 
     public void initializeThisPlane(){
+
         BackToLastPane.lastPanel = (JPanel) CreateUI.frame.getContentPane();
-        CreateMonsters.holder.setVisible(false);
         CreateUI.frame.setContentPane(new CreateStatsUI().StatsPanel);
         CreateUI.frame.revalidate();
     }

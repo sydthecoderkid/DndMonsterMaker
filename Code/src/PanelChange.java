@@ -14,11 +14,12 @@ public class PanelChange implements ComponentListener {
 
     @Override
     public void componentShown(ComponentEvent e) {
-        System.out.println("Shown");
+        CreateUI UI = new CreateUI();
+        BackToLastPane.lastPanel = UI.DndMonsterMaker;
     }
 
     @Override
     public void componentHidden(ComponentEvent e) {
-        System.out.println("Hidden");
+
     }
 }
