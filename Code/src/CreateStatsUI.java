@@ -14,7 +14,9 @@ public class CreateStatsUI implements ActionListener {
     private JTextField intBonusTextField;
     private JTextField charBonusTextField;
     private JButton backButton;
+    private JButton CreateAttacks;
     TextFieldActionListener textFieldListener = new TextFieldActionListener();
+    CreateAttacks attackCreator = new CreateAttacks();
 
     public CreateStatsUI(){
        CreateUI.panels[2] = StatsPanel;
@@ -35,6 +37,7 @@ public class CreateStatsUI implements ActionListener {
         charBonusTextField = AssignListener(charBonusTextField);
 
         backButton.addActionListener(backToLastPane);
+        CreateAttacks.addActionListener(attackCreator);
 
 
 

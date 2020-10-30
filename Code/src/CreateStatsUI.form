@@ -3,7 +3,7 @@
   <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="616" height="400"/>
+      <xy x="20" y="20" width="655" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -94,6 +94,7 @@
             </constraints>
             <properties>
               <font name="Courier New" size="22" style="1"/>
+              <foreground color="-5723992"/>
               <horizontalAlignment value="0"/>
               <text value="Back"/>
             </properties>
@@ -105,6 +106,16 @@
             <properties>
               <font name="Courier New" size="36" style="1"/>
               <text value="Stats"/>
+            </properties>
+          </component>
+          <component id="6d204" class="javax.swing.JButton" binding="CreateAttacks">
+            <constraints>
+              <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Courier New" size="22" style="1"/>
+              <foreground color="-5658199"/>
+              <text value="Create Attacks"/>
             </properties>
           </component>
         </children>

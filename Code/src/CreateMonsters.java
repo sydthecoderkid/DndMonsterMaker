@@ -42,7 +42,6 @@ public class CreateMonsters implements ActionListener {
 
     public void actionPerformed(ActionEvent e) { //Called when the button is pressed. This is the first method that runs in this class.
         setMonsterUI();
-        monsterinfo = new MonsterInfo();
         CreateUI.currentpanel += 1;
     }
 
