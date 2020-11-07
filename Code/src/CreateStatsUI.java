@@ -18,6 +18,20 @@ public class CreateStatsUI implements ActionListener {
     TextFieldActionListener textFieldListener = new TextFieldActionListener();
     CreateAttacks attackCreator = new CreateAttacks();
 
+    public static String strText;
+    public static String dexText;
+    public static String wisText;
+    public static String conText;
+    public static String intText;
+    public static String charText;
+
+
+    /*To assign each one of these values to their proper variables,
+    have them be equal to the default text at first, but when the button is pressed
+    each one is set equal to their respective key in the hashmap. No array needed!
+
+    */
+
     public CreateStatsUI(){
        CreateUI.panels[2] = StatsPanel;
         BackToLastPane backToLastPane = new BackToLastPane();
@@ -53,7 +67,8 @@ public class CreateStatsUI implements ActionListener {
 
         BackToLastPane.lastPanel = (JPanel) CreateUI.frame.getContentPane();
         CreateUI.frame.setContentPane(new CreateStatsUI().StatsPanel);
-        CreateUI.frame.revalidate();
+        CreateUI.frame.revalidate(); //This line is key.
+
     }
 
     public static void setDefaultNames(String name, JTextField textField){
@@ -70,7 +85,7 @@ public class CreateStatsUI implements ActionListener {
                 }
             }
             public void focusLost(FocusEvent e) {
-                // nothing
+                Totalinfo.setInfo(caller.getName(), caller.getText());
             }
         });
 

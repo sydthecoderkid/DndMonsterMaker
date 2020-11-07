@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="iText7-Core-7.1.13-only-jars" level="application" />
+    <orderEntry type="library" exported="" name="com.itextpdf:itextpdf:5.5.12" level="project" />
   </component>
 </module>

@@ -8,19 +8,34 @@ public class CreateAttacks implements ActionListener {
 
     public static JPanel thisLastPanel;
     private JPanel CreateAttackPanel;
-    private JLabel CreateAttacks;
     private JTextArea attackOneTextArea;
     private JTextArea attackTwoTextArea;
     private JTextArea attackThreeTextAre;
+    private JButton BackButton;
+    private JLabel CreateAttacks;
+    private JButton Finish;
     public TextFieldActionListener textFieldListener;
+    public BackToLastPane backToLastPane = new BackToLastPane();
+    public FinishMonster finishMonster = new FinishMonster();
 
+    public static String attackOneText;
+
+    public static String attackTwoText;
+
+    public static String attackThreeText;
     public CreateAttacks(){
-        CreateUI.panels[2] = CreateAttackPanel;
+        CreateUI.panels[3] = CreateAttackPanel;
         attackOneTextArea = AssignListener(attackOneTextArea);
         attackOneTextArea.setName("attackOneTextAre");
 
         attackTwoTextArea = AssignListener(attackTwoTextArea);
         attackTwoTextArea.setName("attackTwoTextArea");
+
+        attackThreeTextAre = AssignListener(attackThreeTextAre);
+        attackThreeTextAre.setName("attackThreeTextArea");
+
+        BackButton.addActionListener(backToLastPane);
+        Finish.addActionListener(finishMonster);
 
     }
 
@@ -41,7 +56,7 @@ public class CreateAttacks implements ActionListener {
         textFieldListener = new TextFieldActionListener();
         caller.addFocusListener(new FocusListener() {
             public void focusGained(FocusEvent e) {
-                if(caller.getText().equals("Attack One:") || caller.getText().equals("Attack Two:")){
+                if(caller.getText().equals("Attack One:") || caller.getText().equals("Attack Two:") || caller.getText().equals("Attack Three:")){
                     caller.setText(""); //Checks to see if the current text is the default, and if so, erases it.
                 }
 

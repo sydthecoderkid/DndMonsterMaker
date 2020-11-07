@@ -3,12 +3,12 @@
   <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="520"/>
+      <xy x="20" y="20" width="500" height="938"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="9579d" binding="CreateAttackPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="9579d" binding="CreateAttackPanel" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -16,18 +16,9 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="a8ba" class="javax.swing.JLabel" binding="CreateAttacks">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Courier New" size="36" style="1"/>
-              <text value="Create Attacks"/>
-            </properties>
-          </component>
           <component id="be7cc" class="javax.swing.JTextArea" binding="attackOneTextArea" default-binding="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+              <grid row="2" column="0" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="90"/>
               </grid>
             </constraints>
@@ -39,7 +30,7 @@
           </component>
           <component id="f3595" class="javax.swing.JTextArea" binding="attackTwoTextArea">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+              <grid row="3" column="0" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="90"/>
               </grid>
             </constraints>
@@ -51,7 +42,7 @@
           </component>
           <component id="3094d" class="javax.swing.JTextArea" binding="attackThreeTextAre">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+              <grid row="4" column="0" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="90"/>
               </grid>
             </constraints>
@@ -59,6 +50,33 @@
               <font name="Courier New" size="20" style="3"/>
               <lineWrap value="true"/>
               <text value="Attack Three:"/>
+            </properties>
+          </component>
+          <component id="84c68" class="javax.swing.JButton" binding="BackButton">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Courier New" size="22" style="1"/>
+              <text value="Back"/>
+            </properties>
+          </component>
+          <component id="5e5ad" class="javax.swing.JLabel" binding="CreateAttacks">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Courier New" size="28" style="1"/>
+              <text value="Create Attacks"/>
+            </properties>
+          </component>
+          <component id="6bad7" class="javax.swing.JButton" binding="Finish">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Courier New" size="22" style="1"/>
+              <text value="Finish"/>
             </properties>
           </component>
         </children>
