@@ -28,7 +28,7 @@ public class CreateMonsters implements ActionListener {
         panelChanger = new PanelChange();
         setDefaultNames("AC", AC);
         setDefaultNames("Monster Name", monsterNameTextField);
-        setDefaultNames("HPTextField", HPTextField);
+        setDefaultNames("HP", HPTextField);
     AC = AssignListener(AC);
     monsterNameTextField = AssignListener(monsterNameTextField);
     HPTextField = AssignListener(HPTextField);
@@ -54,7 +54,9 @@ public class CreateMonsters implements ActionListener {
         BackToLastPane.lastPanel = thisLastPanel;
         CreateUI.frame.setContentPane(new CreateMonsters().MonsterPanel);
         CreateUI.frame.revalidate();
-
+        Totalinfo.setInfo(monsterNameTextField.getName(), monsterNameTextField.getText());
+        Totalinfo.setInfo(AC.getName(), AC.getText());
+        Totalinfo.setInfo(HPTextField.getName(), HPTextField.getText());
     }
 
 
