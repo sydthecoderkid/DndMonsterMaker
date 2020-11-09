@@ -26,13 +26,19 @@ public class CreateAttacks implements ActionListener {
     public CreateAttacks(){
         CreateUI.panels[3] = CreateAttackPanel;
         attackOneTextArea = AssignListener(attackOneTextArea);
-        attackOneTextArea.setName("attackOneTextAre");
+        attackOneTextArea.setName("Attack One");
+       /*
+        attackOneTextArea.setText("");
+        attackTwoTextArea.setText("");
+        attackThreeTextAre.setText("");
+        */
+
 
         attackTwoTextArea = AssignListener(attackTwoTextArea);
-        attackTwoTextArea.setName("attackTwoTextArea");
+        attackTwoTextArea.setName("Attack Two");
 
         attackThreeTextAre = AssignListener(attackThreeTextAre);
-        attackThreeTextAre.setName("attackThreeTextArea");
+        attackThreeTextAre.setName("Attack Three");
 
         BackButton.addActionListener(backToLastPane);
         Finish.addActionListener(finishMonster);
